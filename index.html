@@ -6,22 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Will You Be My Valentine?</title>
     <link rel="stylesheet" href="style.css">
-    <script defer>
-        function moveButton() {
-            const noBtn = document.getElementById('noButton');
+    <script>
+    function moveButton() {
+        const noBtn = document.getElementById('noButton');
+        noBtn.style.position = 'absolute';
+        const maxWidth = window.innerWidth - noBtn.offsetWidth - 20;
+        const maxHeight = window.innerHeight - noBtn.offsetHeight - 20;
 
-            const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
-            const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+        const x = Math.max(0, Math.random() * maxWidth);
+        const y = Math.max(0, Math.random() * maxHeight);
 
-            noBtn.style.left = `${x}px`;
-            noBtn.style.top = `${y}px`;
-        }
-
-        function celebrate() {
-            document.getElementById('question-section').classList.add('hidden');
-            document.getElementById('success-section').classList.remove('hidden');
-        }
-    </script>
+        noBtn.style.left = `${x}px`;
+        noBtn.style.top = `${y}px`;
+    }
+</script>
 </head>
 
 <body>
