@@ -3,9 +3,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; 
     margin: 0;
     font-family: 'Arial', sans-serif;
+    overflow: hidden; 
 }
 
 .container {
@@ -14,32 +15,39 @@ body {
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 90%;     
+    max-width: 400px;
+    z-index: 1;    
 }
 
 img {
-    width: 250px;
+    width: 100%;    
+    max-width: 250px;
     border-radius: 15px;
 }
 
 h1 {
     color: #d11d5d;
-    font-size: 24px;
+    font-size: 1.5rem; 
 }
 
 .buttons {
     margin-top: 20px;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 20px;
+    min-height: 60px; 
 }
 
 button {
-    padding: 10px 25px;
+    padding: 12px 25px; 
     font-size: 18px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     transition: 0.3s;
+    touch-action: manipulation; 
 }
 
 #yesButton {
@@ -50,7 +58,17 @@ button {
 #noButton {
     background-color: #f0f0f0;
     color: #555;
-    position: absolute;
+    position: absolute; 
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+    
+    .container {
+        padding: 20px;
+    }
 }
 
 .hidden {
