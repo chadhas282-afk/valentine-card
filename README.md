@@ -11,8 +11,7 @@ A simple, cute, and interactive web application designed to ask someone to be yo
 
 ## 🚀 Live Demo
 
-> **Tip:** If you host this on **GitHub Pages**, paste your link here!
-> `http://github.com/chadhas282-afk/valentine-card`
+> `https://chadhas282-afk.github.io/valentine-card/`
 
 ## 🛠️ Technologies Used
 
